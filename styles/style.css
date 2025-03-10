@@ -6,7 +6,6 @@ body {
     padding: 0;
 }
 
-/* Cabeçalho */
 header {
     background-color: #1E1E1E;
     padding: 20px;
@@ -34,7 +33,6 @@ nav ul li a {
     font-weight: bold;
 }
 
-/* Seções */
 main {
     padding: 20px;
     text-align: center;
@@ -65,7 +63,6 @@ main {
     text-decoration: none;
 }
 
-/* Rodapé */
 footer {
     background-color: #1E1E1E;
     text-align: center;
@@ -85,15 +82,6 @@ a{
     text-decoration: none;
 }
 
-/* Estilo para o corpo da página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
-    margin: 0;
-    padding: 0;
-}
-
-/* Container do formulário */
 .container {
     width: 100%;
     max-width: 600px;
@@ -105,46 +93,86 @@ body {
     border-radius: 8px;
 }
 
-/* Título */
 h1 {
     text-align: center;
     font-size: 24px;
     color: #333;
 }
 
-/* Estilo para o formulário */
+.contato {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+}
+
 form {
     display: flex;
     flex-direction: column;
-}
-
-/* Estilo para os rótulos (labels) */
-label {
-    margin: 10px 0 5px;
-    font-size: 16px;
-    color: #333;
-}
-
-/* Estilo para os campos de entrada (input e textarea) */
-input[type="text"], input[type="email"], textarea {
+    background-color: #1E1E1E;
     padding: 20px;
-    font-size: 16px;
-    border: 2px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 15px;
+    border-radius: 12px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    max-width: 400px;
+    width: 100%;
 }
 
-/* Estilo para o botão de envio */
-button {
-    padding: 12px;
+label {
+    margin-bottom: 8px;
     font-size: 16px;
-    background-color: #4CAF50;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+input[type="text"], 
+input[type="email"], 
+textarea {
+    padding: 14px;
+    font-size: 16px;
+    border: 2px solid #55089c;
+    border-radius: 8px;
+    margin-bottom: 12px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+input:focus, textarea:focus {
+    border-color: #b22cf0;
+    box-shadow: 0 0 8px #b22cf0;
+    outline: none;
+}
+
+input:hover, textarea:hover {
+    border-color: #b22cf0;
+}
+
+button {
+    padding: 14px;
+    font-size: 18px;
+    background-color: #c74fff;
     color: white;
     border: none;
-    border-radius: 4px;
+    border-radius: 8px;
     cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
 }
 
+/* Efeito hover no botão */
 button:hover {
-    background-color: #45a049;
+    background-color: #b22cf0;
+    transform: scale(1.05);
+}
+
+/* Responsividade */
+@media (max-width: 480px) {
+    form {
+        padding: 16px;
+    }
+
+    input, textarea {
+        padding: 12px;
+    }
+
+    button {
+        font-size: 16px;
+    }
 }
